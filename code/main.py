@@ -1,16 +1,17 @@
+# This script captures video from a file and processes each frame to isolate a specific color (red in this case).
+#-------------------------------------------------------------------------------------------------------------------------------------
 import cv2
 
 # OpenCV Video Capture Example
 from util import get_limits
 from PIL import Image
-# This script captures video from a file and processes each frame to isolate a specific color (yellow in this case).
 
 # OpenCV uses BGR: Blue, Green, Red
 color = [0, 0, 255]
 (lower_limit1, upper_limit1), (lower_limit2, upper_limit2) = get_limits(color)  # Get the HSV limits for the color
 
 # Open the video file
-cap = cv2.VideoCapture('videos/RedBirb.mp4')  
+cap = cv2.VideoCapture('D:/School/Capstone/Detecting Colour with Python/videos/RedBirb.mp4')  
 
 # Check if the video was opened successfully
 if not cap.isOpened():
